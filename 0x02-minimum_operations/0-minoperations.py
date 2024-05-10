@@ -5,22 +5,26 @@ Your text editor can execute only two operations in this file.
 """
 
 
-def min_operations(n):
+def minOperations(n):
     """
     In a text file, there is a single character H.
     Your text editor can execute only two operations in this file.
     """
-    if n <= 1:
+    if not isinstance(n, int):
         return 0
-
     ops = 0
-    div = 2
-
-    while n > 1:
-        if n % div == 0:
-            n //= div
-            ops += div
-        else:
-            div += 1
-
+    clipboard = 0
+    done = 1
+    while done < n:
+        if clipboard == 0:
+            clipboard = done
+            done += clipboard
+            ops += 2
+        elif n - done > 0 and (n - done) % done == 0:
+            clipboard = done
+            done += clipboard
+            ops += 2
+        elif clipboard > 0:
+            done += clipboard
+            ops += 1
     return ops
