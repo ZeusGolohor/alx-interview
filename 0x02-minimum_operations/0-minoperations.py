@@ -12,7 +12,7 @@ def min_operations(n):
     """
     if n <= 1:
         return 0
-    
+
     ops = 0
     div = 2
 
@@ -22,5 +22,5 @@ def min_operations(n):
             ops += div
         else:
             div += 1
-    
+
     return ops
