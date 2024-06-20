@@ -4,6 +4,7 @@ A script to determine the fewest number of coins
 needed to meet a given amount total.
 """
 
+
 def makeChange(available_denominations, target_amount):
     """
     A method to determine the fewest number of coins
