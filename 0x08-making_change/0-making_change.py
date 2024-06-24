@@ -10,6 +10,8 @@ def makeChange(available_denominations, target_amount):
     A method to determine the fewest number of coins
     needed to meet a given amount total.
     """
+    if (target_amount <= 0):
+        return (0)
     min_coins_required = [float('inf')] * (target_amount + 1)
     min_coins_required[0] = 0
 
