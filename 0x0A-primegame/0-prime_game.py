@@ -3,6 +3,7 @@
 Prime Game Module
 """
 
+
 def isWinner(x, nums):
     """
     A methid to determine the winner.
